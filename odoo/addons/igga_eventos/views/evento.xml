@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_evento_tree" model="ir.ui.view">
+            <field name="name">igga_eventos.evento.tree</field>
+            <field name="model">igga_eventos.evento</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="fecha"/>
+                    <field name="lugar"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+    
+
+</odoo>
