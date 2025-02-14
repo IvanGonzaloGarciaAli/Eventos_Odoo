@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+            <!-- Acción para Evento -->
+        <record id="action_evento" model="ir.actions.act_window">
+            <field name="name">Eventos</field>
+            <field name="res_model">jcg_eventos.evento</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <!-- Menú para Evento -->
+        <menuitem id="menu_evento_root" name="Gestión de Eventos"/>
+        <menuitem id="menu_evento" name="Eventos" parent="menu_evento_root" action="action_evento"/>
+            
+    </data>
+    
+
+
+</odoo>
