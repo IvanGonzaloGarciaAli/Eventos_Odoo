@@ -5,6 +5,12 @@ class Evento(models.Model):
     _name = 'igga_eventos.evento'
     _description = 'Evento'
 
-    name = fields.Char(string="Nombre del Evento", required=True)
+    nombre = fields.Char(string="Nombre del Evento", required=True)
     fecha = fields.Date(string="Fecha del Evento", required=True)
     lugar = fields.Char(string="Lugar del Evento", required=True)
+    estado = fields.Selection([
+        ('planificacion', 'Planificacion'),
+        ('en_curso', 'En curso'),
+        ('finalizado', 'Finalizado')
+    ], string="Estado", default='planificacion')
+    imagen = fields.Binary(string="Imagen del Evento")

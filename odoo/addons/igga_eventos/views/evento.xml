@@ -6,9 +6,10 @@
             <field name="model">igga_eventos.evento</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="name"/>
+                    <field name="nombre"/>
                     <field name="fecha"/>
                     <field name="lugar"/>
+                    <field name="estado"/>
                 </tree>
             </field>
         </record>

@@ -2,17 +2,26 @@
 <odoo>
 
     <data>
-            <!-- Acción para Evento -->
+        <!-- Acción para Evento -->
         <record id="action_evento" model="ir.actions.act_window">
             <field name="name">Eventos</field>
-            <field name="res_model">jcg_eventos.evento</field>
-            <field name="view_mode">tree</field>
+            <field name="res_model">igga_eventos.evento</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Acción para Tarea -->
+        <record id="action_tarea" model="ir.actions.act_window">
+            <field name="name">Tareas</field>
+            <field name="res_model">igga_eventos.tarea</field>
+            <field name="view_mode">tree,form</field>
         </record>
 
         <!-- Menú para Evento -->
         <menuitem id="menu_evento_root" name="Gestión de Eventos"/>
         <menuitem id="menu_evento" name="Eventos" parent="menu_evento_root" action="action_evento"/>
-            
+
+        <!-- Menú para Tarea que su parent es Evento-->
+        <menuitem id="menu_tarea" name="Tareas" parent="menu_evento_root" action="action_tarea"/>   
     </data>
     
 

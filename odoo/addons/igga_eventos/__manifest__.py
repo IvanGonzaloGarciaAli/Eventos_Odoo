@@ -24,7 +24,8 @@ Long description of module's purpose
     'data': [
         # 'security/ir.model.access.csv',
         'views/evento.xml',
-        'views/menus.xml'
+        'views/menus.xml',
+        'views/tarea.xml'
         
     ],
     # only loaded in demonstration mode
