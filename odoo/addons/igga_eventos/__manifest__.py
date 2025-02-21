@@ -26,7 +26,8 @@ Long description of module's purpose
         'views/evento.xml',
         'views/menus.xml',
         'views/tarea.xml',
-        'views/invitado.xml'
+        'views/invitado.xml',
+        'views/proveedor.xml'
         
     ],
     # only loaded in demonstration mode

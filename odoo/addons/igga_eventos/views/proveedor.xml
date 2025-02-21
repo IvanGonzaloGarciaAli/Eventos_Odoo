@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    
+        <record id="view_proveedor_tree" model="ir.ui.view">
+            <field name="name">igga_eventos.proveedor.tree</field>
+            <field name="model">igga_eventos.proveedor</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre"/>
+                    <field name="servicio"/>
+                    <field name="costo"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_proveedor_form" model="ir.ui.view">
+            <field name="name">igga_eventos.proveedor.form</field>
+            <field name="model">igga_eventos.proveedor</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="nombre"/>
+                            <field name="servicio"/>
+                            <field name="costo"/>
+                            <field name="evento_ids"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    
+    </data>
+    
+</odoo>

@@ -3,3 +3,4 @@
 from . import evento
 from . import tarea
 from . import invitado
+from . import proveedor
