@@ -9,6 +9,7 @@
                     <field name="name"/>
                     <field name="fecha"/>
                     <field name="lugar"/>
+                    <field name="cliente_id"/>
                     <field name="estado"/>
                 </tree>
             </field>

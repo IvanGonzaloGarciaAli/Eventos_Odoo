@@ -7,8 +7,10 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="descripcion"/>
+                    <field name="responsable_id"/>
                     <field name="fecha_limite"/>
                     <field name="estado"/>
+                    <field name="evento_id"/>
                 </tree>
             </field>
         </record>
@@ -23,8 +25,10 @@
                     <sheet>
                         <group>
                             <field name="descripcion"/>
+                            <field name="responsable_id"/>
                             <field name="fecha_limite"/>
                             <field name="estado"/>
+                            <field name="evento_id"/>
                         </group>
                     </sheet>
                 </form>
