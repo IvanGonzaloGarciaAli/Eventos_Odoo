@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="view_invitado_tree" model="ir.ui.view">
+            <field name="name">igga_eventos.invitado.tree</field>
+            <field name="model">igga_eventos.invitado</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre"/>
+                    <field name="email"/>
+                    <field name="confirmacion"/>
+                    <field name="evento_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_invitado_form" model="ir.ui.view">
+            <field name="name">igga_eventos.invitado.form</field>
+            <field name="model">igga_eventos.invitado</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="nombre"/>
+                            <field name="email"/>
+                            <field name="confirmacion"/>
+                            <field name="evento_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+
+</odoo>

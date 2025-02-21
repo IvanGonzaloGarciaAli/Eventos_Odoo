@@ -25,7 +25,8 @@ Long description of module's purpose
         # 'security/ir.model.access.csv',
         'views/evento.xml',
         'views/menus.xml',
-        'views/tarea.xml'
+        'views/tarea.xml',
+        'views/invitado.xml'
         
     ],
     # only loaded in demonstration mode
