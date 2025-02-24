@@ -17,3 +17,4 @@ class Evento(models.Model):
     imagen = fields.Binary(string="Imagen del Evento")
     tarea_ids = fields.One2many('igga_eventos.tarea', 'evento_id', string="Tareas")
     invitado_ids = fields.One2many('igga_eventos.invitado', 'evento_id', string="Invitados")
+    proveedor_ids = fields.Many2Many('igga_eventos_proveedor',string="Proveedores")
