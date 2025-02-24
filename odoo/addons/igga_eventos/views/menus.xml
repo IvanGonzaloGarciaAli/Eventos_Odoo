@@ -6,7 +6,7 @@
         <record id="action_evento" model="ir.actions.act_window">
             <field name="name">Eventos</field>
             <field name="res_model">igga_eventos.evento</field>
-            <field name="view_mode">tree</field>
+            <field name="view_mode">tree,form</field>
         </record>
 
         <!-- Acción para Tarea -->

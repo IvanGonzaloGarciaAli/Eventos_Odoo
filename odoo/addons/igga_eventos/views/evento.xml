@@ -14,6 +14,58 @@
                 </tree>
             </field>
         </record>
+
+
+        <record id="view_evento_form" model="ir.ui.view">
+            <field name="name">igga_eventos.evento.form</field>
+            <field name="model">igga_eventos.evento</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="fecha"/>
+                            <field name="lugar"/>
+                            <field name="cliente_id"/>
+                            <field name="estado"/>
+                            <field name="imagen" widget="image"/>
+                        </group>
+
+                        <group string="Tareas">
+                            <field name="tarea_ids">
+                                <tree>
+                                    <field name="descripcion"/>
+                                    <field name="responsable_id"/>
+                                    <field name="fecha_limite"/>
+                                    <field name="estado"/>
+                                </tree>
+                            </field>
+                        </group>
+
+                        <group string="Invitados">
+                            <field name="invitado_ids">
+                                <tree>
+                                    <field name="nombre"/>
+                                    <field name="email"/>
+                                    <field name="confirmacion"/>
+                                </tree>
+                            </field>
+                        </group>
+
+                        <group string="Proveedores">
+                            <field name="proveedor_ids">
+                                <tree>
+                                    <field name="nombre"/>
+                                    <field name="servicio"/>
+                                    <field name="costo"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
     </data>
     
 
