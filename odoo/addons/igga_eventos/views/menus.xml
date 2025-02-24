@@ -23,6 +23,13 @@
             <field name="view_mode">tree,form</field>
         </record>
 
+        <!-- Acción para Proveedor -->
+        <record id="action_proveedor" model="ir.actions.act_window">
+            <field name="name">Proveedores</field>
+            <field name="res_model">igga_eventos.proveedor</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
         <!-- Menú para Evento -->
         <menuitem id="menu_evento_root" name="Gestión de Eventos"/>
         <menuitem id="menu_evento" name="Eventos" parent="menu_evento_root" action="action_evento"/>
@@ -30,11 +37,13 @@
         <!-- Menú para Tarea que su parent es Evento-->
         <menuitem id="menu_tarea" name="Tareas" parent="menu_evento_root" action="action_tarea"/>   
 
-        <!-- Menú para Invitado -->
+        <!-- Menú para Invitado que su parent es Evento-->
         <menuitem id="menu_invitado" name="Invitados" parent="menu_evento_root" action="action_invitado"/>
    
+        <!-- Menú para Proveedor que su parent es Evento-->
+        <menuitem id="menu_proveedor" name="Proveedores" parent="menu_evento_root" action="action_proveedor"/>
 
-    
+
     </data>
     
 
