@@ -34,5 +34,6 @@ Long description of module's purpose
     'demo': [
         'demo/demo.xml',
     ],
+        'icon': '/igga_eventos/static/description/icono.png'
 }
 
