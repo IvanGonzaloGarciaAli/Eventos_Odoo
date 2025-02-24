@@ -9,4 +9,10 @@ class Proveedor(models.Model):
     nombre = fields.Char(string="Nombre", required=True)
     servicio = fields.Char(string="Servicio", required=True)
     costo = fields.Float(string="Costo", required=True)
-    evento_ids = fields.Many2many('igga_eventos.evento', string="Eventos")
+    evento_ids = fields.Many2many(
+        'igga_eventos.evento',  
+        'evento_proveedor_rel', 
+        'proveedor_id',
+        'evento_id', 
+        string="Eventos"
+    )
