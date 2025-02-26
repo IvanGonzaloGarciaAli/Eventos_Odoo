@@ -66,6 +66,49 @@
             </field>
         </record>
 
+        <record id="view_evento_kanban" model="ir.ui.view">
+            <field name="name">igga_eventos.evento.kanban</field>
+            <field name="model">igga_eventos.evento</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="name"/>
+                    <field name="fecha"/>
+                    <field name="estado"/>
+
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_card">
+                                <div class="oe_kanban_details">
+                                    <strong><field name="name"/></strong>
+                                    <div><field name="fecha"/></div>
+                                    <div><field name="estado"/></div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+
+                    <kanban_column name="planificacion" string="Planificación">
+                        <kanban_default>
+                            <field name="estado" eval="'planificacion'"/>
+                        </kanban_default>
+                    </kanban_column>
+
+                    <kanban_column name="en_curso" string="En Curso">
+                        <kanban_default>
+                            <field name="estado" eval="'en_curso'"/>
+                        </kanban_default>
+                    </kanban_column>
+
+                    <kanban_column name="finalizado" string="Finalizado">
+                        <kanban_default>
+                            <field name="estado" eval="'finalizado'"/>
+                        </kanban_default>
+                    </kanban_column>
+
+                </kanban>
+            </field>
+        </record>
+
     </data>
     
 
