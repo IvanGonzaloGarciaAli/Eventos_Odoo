@@ -1,3 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_igga_eventos_igga_eventos,igga_eventos.igga_eventos,model_igga_eventos_igga_eventos,base.group_user,1,1,1,1
+access_igga_eventos_evento,igga_eventos.evento,model_igga_eventos_evento,base.group_user,1,1,1,1
 access_igga_eventos_tarea,igga_eventos.tarea,model_igga_eventos_tarea,base.group_user,1,1,1,1
+access_igga_eventos_invitado,igga_eventos.invitado,model_igga_eventos_invitado,base.group_user,1,1,1,1
+access_igga_eventos_proveedor,igga_eventos.proveedor,model_igga_eventos_proveedor,base.group_user,1,1,1,1
