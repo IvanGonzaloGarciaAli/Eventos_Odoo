@@ -1,30 +1,69 @@
 <odoo>
-    <data>
-<!--
-          <record id="object0" model="igga_eventos.igga_eventos">
-            <field name="name">Object 0</field>
-            <field name="value">0</field>
-          </record>
+    <data noupdate="1">
 
-          <record id="object1" model="igga_eventos.igga_eventos">
-            <field name="name">Object 1</field>
-            <field name="value">10</field>
-          </record>
+        <record id="cliente_demo" model="res.partner">
+            <field name="name">Juan Pérez</field>
+            <field name="email">juan.perez@ejemplo.com</field>
+        </record>
+        <record id="proveedor_demo" model="igga_eventos.proveedor">
+            <field name="nombre">Proveedor de Sonido</field>
+            <field name="servicio">Sonido y Música</field>
+            <field name="costo">1500</field>
+        </record>
 
-          <record id="object2" model="igga_eventos.igga_eventos">
-            <field name="name">Object 2</field>
-            <field name="value">20</field>
-          </record>
+        <record id="proveedor_demo2" model="igga_eventos.proveedor">
+            <field name="nombre">Catering Deluxe</field>
+            <field name="servicio">Catering</field>
+            <field name="costo">2500</field>
+        </record>
 
-          <record id="object3" model="igga_eventos.igga_eventos">
-            <field name="name">Object 3</field>
-            <field name="value">30</field>
-          </record>
+        <record id="evento_1" model="igga_eventos.evento">
+            <field name="name">Boda de Juan y Ana</field>
+            <field name="fecha">2025-05-01</field>
+            <field name="lugar">Plaza Mayor, Madrid</field>
+            <field name="cliente_id" ref="cliente_demo"/> 
+            <field name="estado">planificacion</field>
+            <field name="proveedor_ids" eval="[(6, 0, [ref('proveedor_demo')])]"/>
+        </record>
 
-          <record id="object4" model="igga_eventos.igga_eventos">
-            <field name="name">Object 4</field>
-            <field name="value">40</field>
-          </record>
--->
+        <record id="evento_2" model="igga_eventos.evento">
+            <field name="name">Conferencia Tech2025</field>
+            <field name="fecha">2025-06-15</field>
+            <field name="lugar">Auditorio Nacional</field>
+            <field name="cliente_id" ref="cliente_demo"/>
+            <field name="estado">en_curso</field>
+            <field name="proveedor_ids" eval="[(6, 0, [ref('proveedor_demo2')])]"/>
+        </record>
+
+        <record id="invitado_1" model="igga_eventos.invitado">
+            <field name="nombre">Carlos García</field>
+            <field name="email">carlos.garcia@ejemplo.com</field>
+            <field name="confirmacion">True</field>
+            <field name="evento_id" ref="evento_1"/>
+        </record>
+
+        <record id="invitado_2" model="igga_eventos.invitado">
+            <field name="nombre">Laura López</field>
+            <field name="email">laura.lopez@ejemplo.com</field>
+            <field name="confirmacion">False</field>
+            <field name="evento_id" ref="evento_2"/>
+        </record>
+
+        <record id="tarea_1" model="igga_eventos.tarea">
+            <field name="descripcion">Confirmar lista de invitados</field>
+            <field name="responsable_id" ref="base.user_root"/>
+            <field name="fecha_limite">2025-04-15</field>
+            <field name="estado">pendiente</field>
+            <field name="evento_id" ref="evento_1"/>
+        </record>
+
+        <record id="tarea_2" model="igga_eventos.tarea">
+            <field name="descripcion">Reservar el catering</field>
+            <field name="responsable_id" ref="base.user_root"/>
+            <field name="fecha_limite">2025-04-20</field>
+            <field name="estado">pendiente</field>
+            <field name="evento_id" ref="evento_2"/>
+        </record>
+
     </data>
 </odoo>
