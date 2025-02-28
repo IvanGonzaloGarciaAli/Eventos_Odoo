@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- usuarios con menos permisos -->
+        <record id="group_eventos_user" model="res.groups">
+            <field name="name">Usuario de Eventos</field>
+            <field name="comment">Puedes ver y gestionar tus eventos.</field>
+        </record>
+
+        <!-- usuario administrador con los permisos necesarios -->
+        <record id="group_eventos_admin" model="res.groups">
+            <field name="name">Administrador de Eventos</field>
+            <field name="comment">Control total sobre los eventos y proveedores.</field>
+        </record>
+    </data>
+</odoo>

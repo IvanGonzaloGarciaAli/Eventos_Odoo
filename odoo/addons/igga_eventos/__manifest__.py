@@ -22,6 +22,7 @@ Long description of module's purpose
 
     # always loaded
     'data': [
+        'security/igga_eventos_seguridad.xml',
         'security/ir.model.access.csv',
         'views/evento.xml',
         'views/menus.xml',
