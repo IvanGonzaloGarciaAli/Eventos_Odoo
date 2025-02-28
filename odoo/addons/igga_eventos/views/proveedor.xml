@@ -24,7 +24,14 @@
                             <field name="nombre"/>
                             <field name="servicio"/>
                             <field name="costo"/>
-                            <field name="evento_ids"/>
+                            <field name="evento_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="fecha"/>
+                                    <field name="lugar"/>
+                                    <field name="estado"/>
+                                </tree>
+                            </field>
                         </group>
                     </sheet>
                 </form>

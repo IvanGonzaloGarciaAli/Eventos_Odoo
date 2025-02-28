@@ -78,6 +78,9 @@
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_card">
+                                <div class="oe_kanban_image">
+                                    <field name = "imagen" widget="image" options="{'size':(100, 100)}"/>
+                                </div>
                                 <div class="oe_kanban_details">
                                     <strong><field name="name"/></strong>
                                     <div><field name="fecha"/></div>
