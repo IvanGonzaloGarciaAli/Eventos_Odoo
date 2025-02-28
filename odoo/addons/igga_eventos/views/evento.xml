@@ -115,6 +115,19 @@
             </field>
         </record>
 
+        <record id="view_evento_calendar" model="ir.ui.view">
+            <field name="name">igga_eventos.evento.calendar</field>
+            <field name="model">igga_eventos.evento</field>
+            <field name="arch" type="xml">
+                <calendar string="Calendario de Eventos" date_start="fecha">
+                    <field name="name"/>
+                    <field name="cliente_id"/>
+                    <field name="estado"/>
+                </calendar>
+            </field>
+        </record>
+
+
     </data>
     
 
