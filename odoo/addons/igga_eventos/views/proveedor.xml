@@ -18,12 +18,15 @@
             <field name="name">igga_eventos.proveedor.form</field>
             <field name="model">igga_eventos.proveedor</field>
             <field name="arch" type="xml">
-                <form>
+                 <form>
                     <sheet>
                         <group>
                             <field name="nombre"/>
                             <field name="servicio"/>
                             <field name="costo"/>
+                        </group>
+
+                        <group string="Eventos Asociados">
                             <field name="evento_ids">
                                 <tree>
                                     <field name="name"/>

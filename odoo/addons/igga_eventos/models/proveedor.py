@@ -16,3 +16,4 @@ class Proveedor(models.Model):
         'evento_id', 
         string="Eventos"
     )
+

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields
+from odoo import models, fields,api
 
 class Evento(models.Model):
     _name = 'igga_eventos.evento'
@@ -14,6 +14,7 @@ class Evento(models.Model):
         ('en_curso', 'En curso'),
         ('finalizado', 'Finalizado')
     ], string="Estado", default='planificacion')
+    costo = fields.Float(string="Costo")
     imagen = fields.Binary(string="Imagen del Evento")
     tarea_ids = fields.One2many('igga_eventos.tarea', 'evento_id', string="Tareas")
     invitado_ids = fields.One2many('igga_eventos.invitado', 'evento_id', string="Invitados")
@@ -24,3 +25,9 @@ class Evento(models.Model):
         'proveedor_id', 
         string="Proveedores"
     )
+    total_costo = fields.Float("Costo Total", compute="_compute_total_costo", store=True)
+
+    @api.depends('proveedor_ids.costo')
+    def _compute_total_costo(self):
+        for record in self:
+            record.total_costo = sum(proveedor.costo for proveedor in record.proveedor_ids)
