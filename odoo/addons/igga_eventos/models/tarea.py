@@ -12,4 +12,5 @@ class Tarea(models.Model):
         ('pendiente', 'Pendiente'),
         ('completada', 'Completada')
     ], string="Estado", default='pendiente')
+    #campo con la relación de evento
     evento_id = fields.Many2one('igga_eventos.evento', string="Evento", required=True)

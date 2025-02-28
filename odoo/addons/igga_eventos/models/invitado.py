@@ -9,4 +9,5 @@ class Invitado(models.Model):
     nombre = fields.Char(string="Nombre", required=True)
     email = fields.Char(string="Correo Electrónico", required=True)
     confirmacion = fields.Boolean(string="Confirmación", default=False)
+    #campo con la relacion con evento
     evento_id = fields.Many2one('igga_eventos.evento', string="Evento", required=True)
