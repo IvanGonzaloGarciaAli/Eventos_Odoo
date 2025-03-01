@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-    
+        <!-- Vista Tree -->
         <record id="view_proveedor_tree" model="ir.ui.view">
             <field name="name">igga_eventos.proveedor.tree</field>
             <field name="model">igga_eventos.proveedor</field>
@@ -9,11 +9,12 @@
                 <tree>
                     <field name="nombre"/>
                     <field name="servicio"/>
+                    <!-- De este campo evento saca el campo calculado -->
                     <field name="costo"/>
                 </tree>
             </field>
         </record>
-
+        <!-- Vista Form -->
         <record id="view_proveedor_form" model="ir.ui.view">
             <field name="name">igga_eventos.proveedor.form</field>
             <field name="model">igga_eventos.proveedor</field>
@@ -23,9 +24,10 @@
                         <group>
                             <field name="nombre"/>
                             <field name="servicio"/>
+                            <!-- De este campo evento saca el campo calculado -->
                             <field name="costo"/>
                         </group>
-
+                        <!-- Muestra los eventos asociados a cada evento id -->
                         <group string="Eventos Asociados">
                             <field name="evento_ids">
                                 <tree>

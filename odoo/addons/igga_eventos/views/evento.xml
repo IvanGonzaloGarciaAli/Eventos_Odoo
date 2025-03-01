@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+        <!-- Vista Tree -->
         <record id="view_evento_tree" model="ir.ui.view">
             <field name="name">igga_eventos.evento.tree</field>
             <field name="model">igga_eventos.evento</field>
@@ -11,12 +12,13 @@
                     <field name="lugar"/>
                     <field name="cliente_id"/>
                     <field name="estado"/>
+                    <!-- Campo calculado -->
                     <field name="total_costo"/>
                 </tree>
             </field>
         </record>
 
-
+        <!-- Vista Form -->
         <record id="view_evento_form" model="ir.ui.view">
             <field name="name">igga_eventos.evento.form</field>
             <field name="model">igga_eventos.evento</field>
@@ -30,9 +32,10 @@
                             <field name="cliente_id"/>
                             <field name="estado"/>
                             <field name="imagen" widget="image"/>
+                            <!-- Campo calculado que solo se puede leer -->
                             <field name="total_costo" readonly="1"/>
                         </group>
-
+                        <!-- Datos de tareas dentro de eventos -->
                         <group string="Tareas">
                             <field name="tarea_ids">
                                 <tree>
@@ -43,7 +46,7 @@
                                 </tree>
                             </field>
                         </group>
-
+                        <!-- Datos de invitados dentro de Eventos -->
                         <group string="Invitados">
                             <field name="invitado_ids">
                                 <tree>
@@ -53,7 +56,7 @@
                                 </tree>
                             </field>
                         </group>
-
+                        <!-- Datos de proveedores dentro de eventos -->
                         <group string="Proveedores">
                             <field name="proveedor_ids">
                                 <tree>
@@ -67,7 +70,7 @@
                 </form>
             </field>
         </record>
-
+        <!-- Vista Kanban -->
         <record id="view_evento_kanban" model="ir.ui.view">
             <field name="name">igga_eventos.evento.kanban</field>
             <field name="model">igga_eventos.evento</field>
@@ -81,40 +84,24 @@
                         <t t-name="kanban-box">
                             <div class="oe_kanban_card">
                                 <div class="oe_kanban_image">
+                                    <!-- Imagen dentro de la vista Kanban -->
                                     <field name = "imagen" widget="image" options="{'size':(100, 100)}"/>
                                 </div>
                                 <div class="oe_kanban_details">
                                     <strong><field name="name"/></strong>
                                     <div><field name="fecha"/></div>
                                     <div><field name="estado"/></div>
+                                    <!-- Campo calculado en negrita -->
                                     <div><strong>Total Costo:</strong> <field name="total_costo"/></div>
                                 </div>
                             </div>
                         </t>
                     </templates>
-
-                    <kanban_column name="planificacion" string="Planificación">
-                        <kanban_default>
-                            <field name="estado" eval="'planificacion'"/>
-                        </kanban_default>
-                    </kanban_column>
-
-                    <kanban_column name="en_curso" string="En Curso">
-                        <kanban_default>
-                            <field name="estado" eval="'en_curso'"/>
-                        </kanban_default>
-                    </kanban_column>
-
-                    <kanban_column name="finalizado" string="Finalizado">
-                        <kanban_default>
-                            <field name="estado" eval="'finalizado'"/>
-                        </kanban_default>
-                    </kanban_column>
-
+                    
                 </kanban>
             </field>
         </record>
-
+        <!-- Vista Calendar -->
         <record id="view_evento_calendar" model="ir.ui.view">
             <field name="name">igga_eventos.evento.calendar</field>
             <field name="model">igga_eventos.evento</field>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+        <!-- Vista Tree -->
         <record id="view_tarea_tree" model="ir.ui.view">
             <field name="name">igga_eventos.tarea.tree</field>
             <field name="model">igga_eventos.tarea</field>
@@ -17,6 +18,7 @@
     </data>
     
      <data>
+        <!-- Vista Form -->
         <record id="view_tarea_form" model="ir.ui.view">
             <field name="name">igga_eventos.tarea.form</field>
             <field name="model">igga_eventos.tarea</field>

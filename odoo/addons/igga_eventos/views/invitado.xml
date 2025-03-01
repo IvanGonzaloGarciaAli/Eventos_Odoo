@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-
+        <!-- Vista Tree -->
         <record id="view_invitado_tree" model="ir.ui.view">
             <field name="name">igga_eventos.invitado.tree</field>
             <field name="model">igga_eventos.invitado</field>
@@ -14,7 +14,7 @@
                 </tree>
             </field>
         </record>
-
+        <!-- Vista Form -->
         <record id="view_invitado_form" model="ir.ui.view">
             <field name="name">igga_eventos.invitado.form</field>
             <field name="model">igga_eventos.invitado</field>
